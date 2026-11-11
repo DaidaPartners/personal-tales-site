@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Página no encontrada · Personal Tales</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; box-sizing: border-box;
+      background: #fbf6ec; color: #26314f; font: 1.0625rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+    main { max-width: 480px; text-align: center; background: #fff; border-radius: 18px; padding: 28px 22px; box-shadow: 0 6px 24px rgba(43,58,103,.10); }
+    h1 { font-family: Georgia, serif; color: #2b3a67; margin: 0 0 .5em; }
+    a { display: inline-block; background: #2b3a67; color: #fff; text-decoration: none; padding: 12px 22px; border-radius: 999px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Esta página no existe</h1>
+    <p>Puede que el enlace esté mal escrito. Vuelve al inicio de Personal Tales.</p>
+    <p><a id="inicio" href="./">Volver al inicio</a></p>
+  </main>
+  <script>
+    (function () {
+      var parts = location.pathname.split('/').filter(Boolean);
+      var base = /\.github\.io$/.test(location.hostname) && parts.length ? '/' + parts[0] + '/' : '/';
+      document.getElementById('inicio').setAttribute('href', base);
+    })();
+  </script>
+</body>
+</html>

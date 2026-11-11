@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danos tu opinión · Personal Tales</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fbf6ec">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../config.js"></script>
+  <script src="../app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Personal Tales, inicio">
+      <img src="../favicon.svg" alt="" width="28" height="28">
+      <span>Personal Tales <em>cuentos personalizados</em></span>
+    </a>
+    <a class="topbar-link" href="../#lista">Lista de espera</a>
+  </header>
+
+  <main class="section wrap narrow">
+    <h1>Danos tu opinión</h1>
+    <p class="lead">Son dos preguntas. Contesta lo que quieras, con tus palabras.</p>
+
+    <form class="form" action="#" method="post" data-form="opinion" novalidate>
+      <div class="field">
+        <label for="opinion">¿Qué te parece la idea?</label>
+        <textarea id="opinion" name="opinion" rows="4" maxlength="2000"></textarea>
+        <p class="field-error" data-error-for="opinion"></p>
+      </div>
+      <div class="field">
+        <label for="story_idea">¿Qué cuento le harías a tu hijo?</label>
+        <p class="hint" id="story_hint">Por ejemplo: miedo a la oscuridad, el primer día de cole, la llegada de un hermanito...</p>
+        <textarea id="story_idea" name="story_idea" rows="4" maxlength="2000" aria-describedby="story_hint"></textarea>
+      </div>
+      <div class="field">
+        <label for="email">Tu email <span class="optional">(opcional, si quieres que te escribamos)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254">
+        <p class="field-error" data-error-for="email"></p>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="website">No rellenes este campo</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="field field-check">
+        <input id="consent" name="consent" type="checkbox">
+        <label for="consent">Si dejo mi email: soy mayor de 18 años y acepto la <a href="../privacidad/">política de privacidad</a> para que guardéis mi email junto a mi opinión y podáis escribirme sobre ella.</label>
+        <p class="field-error" data-error-for="consent"></p>
+      </div>
+      <button class="btn btn-big btn-block" type="submit">Enviar mi opinión</button>
+      <p class="msg" data-msg role="status" aria-live="polite"></p>
+      <div class="layer1">
+        <p><strong>Información básica sobre tus datos</strong></p>
+        <p><strong>Responsable:</strong> Daida Partners, S.L. <strong>Finalidad:</strong> mejorar el producto con tu opinión y, si nos dejas tu email, poder escribirte sobre ella. <strong>Base:</strong> tu consentimiento, que puedes retirar cuando quieras. <strong>Derechos:</strong> acceso, rectificación, supresión y los demás que explicamos, escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>. <a href="../privacidad/">Más información</a>.</p>
+      </div>
+    </form>
+    <p class="center"><a href="../">← Volver al inicio</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>Personal Tales</strong> · cuentos personalizados · con Daida Partners</p>
+      <p><a href="../privacidad/">Privacidad</a> · <a href="../aviso-legal/">Aviso legal</a> · <a href="../opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
+      <p class="small">Esta web no usa cookies.</p>
+    </div>
+  </footer>
+</body>
+</html>

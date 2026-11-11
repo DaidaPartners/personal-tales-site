@@ -1,1 +1,165 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Personal Tales · cuentos personalizados</title></head><body style="font-family:system-ui;text-align:center;padding:3rem 1rem;background:#fbf6ec;color:#3a3150"><h1>Personal Tales</h1><p>Cuentos personalizados. Muy pronto.</p><footer style="margin-top:3rem;font-size:.85rem;opacity:.7">con Daida Partners</footer></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Tales · cuentos personalizados</title>
+  <meta name="description" content="Cuentos con tu voz en los que tu hijo es el protagonista y crece con él. Apúntate a la lista de espera.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fbf6ec">
+  <meta property="og:title" content="Personal Tales · cuentos personalizados">
+  <meta property="og:site_name" content="Personal Tales">
+  <meta property="og:description" content="Cuentos con tu voz en los que tu hijo es el protagonista y crece con él.">
+  <meta property="og:image" content="assets/hero.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/hero-640.webp" media="(max-width: 700px)" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#lista">Saltar a la lista de espera</a>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Personal Tales, inicio">
+      <img src="favicon.svg" alt="" width="28" height="28">
+      <span>Personal Tales <em>cuentos personalizados</em></span>
+    </a>
+    <a class="topbar-link" href="#lista">Lista de espera</a>
+  </header>
+
+  <main>
+    <!-- 1. Cabecera -->
+    <section class="hero">
+      <picture class="hero-img">
+        <source type="image/webp" media="(max-width: 700px)" srcset="assets/hero-640.webp">
+        <source type="image/webp" srcset="assets/hero.webp">
+        <img src="assets/hero.jpg" width="1280" height="720"
+             alt="Dibujo en acuarela de la misma niña en tres edades: de bebé mira un cuento entre estrellas, de pequeña lee junto a un dragón amable bajo la luna y de mayor sonríe con un libro abierto. Un hilo dorado une las tres escenas.">
+      </picture>
+      <div class="hero-text wrap">
+        <p class="eyebrow">Muy pronto</p>
+        <h1>Cuentos con tu voz en los que tu hijo es el protagonista y crece con él</h1>
+        <p class="lead">Cuentos para hablar en casa de los miedos, el cole, los celos o la llegada de un hermanito. Tu historia, contada con tu voz.</p>
+        <a class="btn btn-big" href="#lista">Apuntarme a la lista de espera</a>
+        <p class="small">Gratis y sin compromiso. Te avisamos cuando abramos.</p>
+      </div>
+    </section>
+
+    <!-- 2. Cómo funciona -->
+    <section class="section wrap" aria-labelledby="como">
+      <h2 id="como">Así de fácil</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <svg class="step-ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="10" width="34" height="44" rx="5" fill="#fff6dc" stroke="#2b3a67" stroke-width="3"/><path d="M17 22h20M17 30h20M17 38h12" stroke="#c98a12" stroke-width="3" stroke-linecap="round"/><path d="M50 14l6 6-20 20-8 2 2-8z" fill="#e8b33a" stroke="#2b3a67" stroke-width="3" stroke-linejoin="round"/></svg>
+          <h3>Escribe tu cuento</h3>
+          <p>Como te salga, con tus palabras. Un cuento que te inventas en la cama ya vale.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <svg class="step-ico" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="48" height="38" rx="6" fill="#ece6f7" stroke="#2b3a67" stroke-width="3"/><circle cx="22" cy="25" r="5" fill="#e8b33a"/><path d="M12 46l14-14 10 10 6-6 12 10" fill="none" stroke="#7d6bb3" stroke-width="3" stroke-linejoin="round"/><path d="M40 6c3 3 3 6 0 9" fill="none" stroke="#c98a12" stroke-width="3" stroke-linecap="round"/></svg>
+          <h3>Lo ilustramos</h3>
+          <p>Le ponemos dibujos bonitos. Tu hijo es el protagonista, dibujado como un personaje de cuento.</p>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <svg class="step-ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 38v-6a18 18 0 0 1 36 0v6" fill="none" stroke="#2b3a67" stroke-width="4" stroke-linecap="round"/><rect x="8" y="36" width="12" height="18" rx="5" fill="#e8b33a" stroke="#2b3a67" stroke-width="3"/><rect x="44" y="36" width="12" height="18" rx="5" fill="#e8b33a" stroke="#2b3a67" stroke-width="3"/><path d="M32 52c-5-4-8-6-8-9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 3-3 5-8 9z" fill="#c98a12"/></svg>
+          <h3>Lo escucha con tu voz</h3>
+          <p>Le llega por un enlace al móvil y lo escucha contado con tu voz, aunque no estés.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. El niño crece dentro de los cuentos -->
+    <section class="section band" aria-labelledby="crece">
+      <div class="wrap">
+        <h2 id="crece">Tu hijo crece dentro de los cuentos</h2>
+        <p class="lead">Los cuentos cambian a la vez que él. Los dibujos, las palabras y las frases se hacen mayores con su edad.</p>
+        <ol class="timeline">
+          <li><strong>2 años</strong><span>Dibujos sencillos y frases cortitas.</span></li>
+          <li><strong>6 años</strong><span>Más aventura y palabras nuevas.</span></li>
+          <li><strong>10 años</strong><span>Historias largas y dibujos con detalle.</span></li>
+          <li><strong>18 años</strong><span>Todos sus cuentos, de toda su vida.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Suscripción -->
+    <section class="section band band-night" aria-labelledby="suscripcion">
+      <div class="wrap narrow">
+        <h2 id="suscripcion">Un capítulo nuevo cada cierto tiempo</h2>
+        <p class="lead">Un capítulo nuevo cada cierto tiempo, cortito, por enlace, como las colecciones de antes.</p>
+        <p>Tu hijo espera el siguiente con ganas. Y lo podéis compartir con los abuelos, los tíos o los padrinos.</p>
+        <p class="price">Los planes y precios los anunciaremos pronto.</p>
+      </div>
+    </section>
+
+    <!-- 5. Seguridad -->
+    <section class="section wrap" aria-labelledby="seguridad">
+      <h2 id="seguridad">Su seguridad primero</h2>
+      <p class="lead">Son tus hijos. Los cuidamos como tú.</p>
+      <ul class="checks">
+        <li><strong>Nunca fotos reales.</strong> Tu hijo aparece como un personaje dibujado.</li>
+        <li><strong>Todo bajo llave.</strong> Vuestros cuentos y vuestra voz están guardados y protegidos.</li>
+        <li><strong>Tú decides con quién se comparte.</strong> Nadie más los ve si tú no quieres.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Lista de espera -->
+    <section class="section band" id="lista" aria-labelledby="lista-titulo" tabindex="-1">
+      <div class="wrap narrow">
+        <h2 id="lista-titulo">Apúntate a la lista de espera</h2>
+        <p class="lead">Te avisamos en cuanto abramos. Solo necesitamos tu email.</p>
+
+        <form class="form" action="#" method="post" data-form="waitlist" novalidate>
+          <div class="field">
+            <label for="email">Tu email</label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254">
+            <p class="field-error" data-error-for="email"></p>
+          </div>
+          <div class="field">
+            <label for="name">Tu nombre <span class="optional">(si quieres)</span></label>
+            <input id="name" name="name" type="text" autocomplete="given-name" maxlength="80">
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="website">No rellenes este campo</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field field-check">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">Soy mayor de 18 años y acepto la <a href="privacidad/">política de privacidad</a> para que me aviséis del lanzamiento.</label>
+            <p class="field-error" data-error-for="consent"></p>
+          </div>
+          <div class="field field-check">
+            <input id="consent_marketing" name="consent_marketing" type="checkbox">
+            <label for="consent_marketing">Quiero recibir también novedades de Personal Tales. <span class="optional">(Opcional)</span></label>
+          </div>
+          <button class="btn btn-big btn-block" type="submit">Apuntarme a la lista de espera</button>
+          <p class="msg" data-msg role="status" aria-live="polite"></p>
+          <div class="layer1">
+            <p><strong>Información básica sobre tus datos</strong></p>
+            <p><strong>Responsable:</strong> Daida Partners, S.L. <strong>Finalidad:</strong> avisarte del lanzamiento y, solo si marcas la segunda casilla, enviarte novedades. <strong>Base:</strong> tu consentimiento, que puedes retirar cuando quieras. <strong>Derechos:</strong> acceso, rectificación, supresión y los demás que explicamos, escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>. <a href="privacidad/">Más información</a>.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 7. Opinión -->
+    <section class="section wrap center" aria-labelledby="opina">
+      <h2 id="opina">¿Qué te parece?</h2>
+      <p class="lead">Estamos empezando y tu opinión nos ayuda mucho.</p>
+      <a class="btn btn-ghost" href="opinion/">Danos tu opinión</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p><strong>Personal Tales</strong> · cuentos personalizados · con Daida Partners</p>
+      <p><a href="privacidad/">Privacidad</a> · <a href="aviso-legal/">Aviso legal</a> · <a href="opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
+      <p class="small">Esta web no usa cookies.</p>
+    </div>
+  </footer>
+</body>
+</html>

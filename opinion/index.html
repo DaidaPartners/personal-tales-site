@@ -36,7 +36,7 @@
         <textarea id="story_idea" name="story_idea" rows="4" maxlength="2000" aria-describedby="story_hint"></textarea>
       </div>
       <div class="field">
-        <label for="email">Tu email <span class="optional">(opcional, si quieres que te escribamos)</span></label>
+        <label for="email">Tu correo electrónico <span class="optional">(opcional, si quieres que te escribamos)</span></label>
         <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254">
         <p class="field-error" data-error-for="email"></p>
       </div>
@@ -45,15 +45,15 @@
         <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
       </div>
       <div class="field field-check">
-        <input id="consent" name="consent" type="checkbox">
-        <label for="consent">Si dejo mi email: soy mayor de 18 años y acepto la <a href="../privacidad/">política de privacidad</a> para que guardéis mi email junto a mi opinión y podáis escribirme sobre ella.</label>
+        <label class="check-hit" for="consent"><input id="consent" name="consent" type="checkbox"></label>
+        <label for="consent">Si dejo mi correo electrónico: soy mayor de 18 años y acepto la <a href="../privacidad/">política de privacidad</a> para que guardéis mi correo junto a mi opinión y podáis escribirme sobre ella.</label>
         <p class="field-error" data-error-for="consent"></p>
       </div>
       <button class="btn btn-big btn-block" type="submit">Enviar mi opinión</button>
       <p class="msg" data-msg role="status" aria-live="polite"></p>
       <div class="layer1">
         <p><strong>Información básica sobre tus datos</strong></p>
-        <p><strong>Responsable:</strong> Daida Partners, S.L. <strong>Finalidad:</strong> mejorar el producto con tu opinión y, si nos dejas tu email, poder escribirte sobre ella. <strong>Base:</strong> tu consentimiento, que puedes retirar cuando quieras. <strong>Derechos:</strong> acceso, rectificación, supresión y los demás que explicamos, escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>. <a href="../privacidad/">Más información</a>.</p>
+        <p><strong>Responsable:</strong> Daida Partners, S.L. <strong>Finalidad:</strong> mejorar el producto con tu opinión y, si nos dejas tu correo, poder escribirte sobre ella. <strong>Base:</strong> tu consentimiento, que puedes retirar cuando quieras. <strong>Derechos:</strong> acceso, rectificación, supresión y los demás que explicamos, escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>. <a href="../privacidad/">Más información</a>.</p>
       </div>
     </form>
     <p class="center"><a href="../">← Volver al inicio</a></p>
@@ -62,8 +62,9 @@
   <footer class="footer">
     <div class="wrap">
       <p><strong>Personal Tales</strong> · cuentos personalizados · con Daida Partners</p>
-      <p><a href="../privacidad/">Privacidad</a> · <a href="../aviso-legal/">Aviso legal</a> · <a href="../opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
-      <p class="small">Esta web no usa cookies.</p>
+      <p><a class="btn btn-contact" href="mailto:daniel@suarezsa.com?subject=Pregunta%20sobre%20Personal%20Tales">Escríbenos</a></p>
+      <p class="footer-links"><a href="../privacidad/">Privacidad</a> · <a href="../aviso-legal/">Aviso legal</a> · <a href="../opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
+      <p class="small">Esta web no usa cookies (archivos que guardan datos en tu móvil u ordenador).</p>
     </div>
   </footer>
 </body>

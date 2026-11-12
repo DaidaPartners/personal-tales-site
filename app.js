@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   var EMAIL_RE = /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/;
-  var CONSENT_VERSION = '2026-11-11-c14-pt-provisional';
+  var CONSENT_VERSION = '2026-11-12-abuela-provisional';
   var CONTACT = 'daniel@suarezsa.com';
   var CONFIG = window.DAIDA_CUENTOS_CONFIG;
   var STATIC_MODE = !!CONFIG;
@@ -45,13 +45,13 @@
   function validate(kind, data) {
     var errors = {};
     if (kind === 'waitlist') {
-      if (!EMAIL_RE.test(data.email)) errors.email = 'Revisa el email: parece que no está bien escrito.';
+      if (!EMAIL_RE.test(data.email)) errors.email = 'Revisa el correo electrónico: parece que no está bien escrito.';
       if (data.name && data.name.length > 80) errors.name = 'El nombre es muy largo (máximo 80 letras).';
       if (!data.consent) errors.consent = 'Marca la casilla de mayor de 18 años y privacidad para poder apuntarte.';
     } else {
       if (!data.opinion && !data.story_idea) errors.opinion = 'Escribe al menos una de las dos respuestas.';
-      if (data.email && !EMAIL_RE.test(data.email)) errors.email = 'Revisa el email: parece que no está bien escrito.';
-      if (data.email && !data.consent) errors.consent = 'Si nos dejas tu email, marca la casilla de mayor de 18 años y privacidad.';
+      if (data.email && !EMAIL_RE.test(data.email)) errors.email = 'Revisa el correo electrónico: parece que no está bien escrito.';
+      if (data.email && !data.consent) errors.consent = 'Si nos dejas tu correo, marca la casilla de mayor de 18 años y privacidad.';
     }
     return errors;
   }
@@ -100,7 +100,7 @@
     if (kind === 'waitlist') {
       subject = 'Quiero apuntarme a la lista de espera de Personal Tales';
       body = 'Hola, quiero apuntarme a la lista de espera.\n\n' +
-        'Email: ' + data.email + '\n' +
+        'Correo: ' + data.email + '\n' +
         (data.name ? 'Nombre: ' + data.name + '\n' : '') +
         'Soy mayor de 18 años y acepto la política de privacidad para que me aviséis del lanzamiento.\n' +
         'Novedades: ' + (data.consent_marketing ? 'sí, también quiero recibirlas' : 'no') + '\n';
@@ -114,12 +114,12 @@
 
   var STATIC_ERRORS = {
     waitlist: {
-      datos: 'Revisa el email: parece que no está bien escrito.',
+      datos: 'Revisa el correo electrónico: parece que no está bien escrito.',
       consentimiento: 'Falta marcar la casilla de mayor de 18 años y privacidad.'
     },
     opinion: {
-      datos: 'Escribe al menos una respuesta y revisa el email si lo has puesto.',
-      consentimiento: 'Si nos dejas tu email, marca la casilla de mayor de 18 años y privacidad.'
+      datos: 'Escribe al menos una respuesta y revisa el correo si lo has puesto.',
+      consentimiento: 'Si nos dejas tu correo, marca la casilla de mayor de 18 años y privacidad.'
     },
     formato: 'No hemos podido leer el formulario. Prueba otra vez.',
     tipo: 'Algo no cuadra en el formulario. Recarga la página y prueba otra vez.'
@@ -139,7 +139,7 @@
       .then(function (res) { return res.json(); })
       .then(function (body) {
         if (body && body.ok && body.duplicate) {
-          return { ok: true, message: 'Este email ya estaba en la lista. ¡No hace falta que te apuntes otra vez!' };
+          return { ok: true, message: 'Este correo ya estaba en la lista. ¡No hace falta que te apuntes otra vez!' };
         }
         if (body && body.ok) {
           return { ok: true, message: kind === 'waitlist'
@@ -197,7 +197,7 @@
           showMsg(form, false, kind === 'waitlist'
             ? 'Todavía estamos montando la lista. Escríbenos a ' + CONTACT + ' y te apuntamos a mano.'
             : 'Todavía estamos montando el formulario. Escríbenos a ' + CONTACT + ' y nos llega igual.',
-            { href: mailtoFallback(kind, data), text: 'Escribir el email' });
+            { href: mailtoFallback(kind, data), text: 'Escribir el correo' });
         } else if (r.ok) {
           showMsg(form, true, r.message);
           if (!r.keep) form.reset();

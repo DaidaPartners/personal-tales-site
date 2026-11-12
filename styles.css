@@ -195,3 +195,41 @@ input:focus, select:focus, textarea:focus { border-color: var(--night-2); outlin
 .layer1 p { margin: 0 0 .4em; }
 .msg a { color: inherit; }
 .price { line-height: 1.4; }
+
+/* Pase Abuela 12/11 */
+.hero-note { font-size: 1rem; max-width: 34em; }
+@media (min-width: 860px) { .hero-note { margin-left: auto; margin-right: auto; } }
+
+/* Qué es la lista de espera */
+.waitlist-info { background: #fff; border-left: 6px solid var(--gold-soft); border-radius: 14px; padding: 16px 18px; margin: 16px 0 0; box-shadow: var(--shadow); }
+.waitlist-info h3 { margin-bottom: .4em; }
+.waitlist-info ul { margin: 0; padding-left: 1.2em; }
+.waitlist-info li { margin-bottom: .5em; }
+.waitlist-info li:last-child { margin-bottom: 0; }
+
+/* Tu voz en 3 pasos */
+.voice-steps { list-style: none; counter-reset: voz; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+.voice-steps li { counter-increment: voz; position: relative; background: #fff; border-radius: 14px; box-shadow: var(--shadow); padding: 14px 16px 14px 64px; min-height: 64px; }
+.voice-steps li::before { content: counter(voz); position: absolute; left: 14px; top: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--night); color: #fff; font: 700 1.15rem/36px var(--serif); text-align: center; }
+.voice-steps strong { display: block; color: var(--night); }
+@media (min-width: 760px) { .voice-steps { grid-template-columns: repeat(3, 1fr); } }
+
+/* Contacto */
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 8px 0 16px; }
+.actions .btn { min-height: 48px; }
+.btn-contact { background: var(--gold-soft); color: var(--night); box-shadow: 0 4px 0 #a8770c; min-height: 48px; }
+.btn-contact:hover { background: #f0c45c; color: var(--night); }
+
+/* Resumen legal llano */
+.summary { background: #fff; border-radius: 14px; box-shadow: var(--shadow); padding: 16px 18px; margin: 0 0 24px; }
+.summary h2 { margin-top: 0; }
+.summary ul { margin: 0; padding-left: 1.2em; }
+.summary li { margin-bottom: .5em; }
+
+/* Zonas de toque de al menos 44 px */
+.topbar-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+.footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.field-check { grid-template-columns: 44px 1fr; gap: 8px; }
+.field .check-hit { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -8px 0 0; cursor: pointer; }
+.field-check .check-hit input { width: 28px; height: 28px; margin: 0; cursor: pointer; }
+.field-check label[for]:not(.check-hit) { padding-top: 2px; }

@@ -38,11 +38,11 @@
              alt="Dibujo en acuarela de la misma niña en tres edades: de bebé mira un cuento entre estrellas, de pequeña lee junto a un dragón amable bajo la luna y de mayor sonríe con un libro abierto. Un hilo dorado une las tres escenas.">
       </picture>
       <div class="hero-text wrap">
-        <p class="eyebrow">Muy pronto</p>
+        <p class="eyebrow">Muy pronto · Lista de espera</p>
         <h1>Cuentos con tu voz en los que tu hijo es el protagonista y crece con él</h1>
         <p class="lead">Cuentos para hablar en casa de los miedos, el cole, los celos o la llegada de un hermanito. Tu historia, contada con tu voz.</p>
         <a class="btn btn-big" href="#lista">Apuntarme a la lista de espera</a>
-        <p class="small">Gratis y sin compromiso. Te avisamos cuando abramos.</p>
+        <p class="small hero-note">Apuntarse es gratis. Todavía no se pueden encargar cuentos: cuando se pueda, te escribimos un correo para que encargues el tuyo.</p>
       </div>
     </section>
 
@@ -68,6 +68,17 @@
           <h3>Lo escucha con tu voz</h3>
           <p>Le llega por un enlace al móvil y lo escucha contado con tu voz, aunque no estés.</p>
         </li>
+      </ol>
+    </section>
+
+    <!-- 2b. Cómo se hace el cuento con tu voz -->
+    <section class="section wrap" id="tu-voz" aria-labelledby="voz">
+      <h2 id="voz">Así se hace el cuento con tu voz</h2>
+      <p class="lead">Solo necesitas un móvil. En 3 pasos:</p>
+      <ol class="voice-steps">
+        <li><strong>Grabas tu voz.</strong> Lees en voz alta, con el móvil, unas frases cortas que te damos.</li>
+        <li><strong>Preparamos el cuento.</strong> Con esa grabación, el cuento se cuenta con tu voz.</li>
+        <li><strong>Tu hijo lo escucha.</strong> Le llega un enlace al móvil y oye tu voz, aunque no estés.</li>
       </ol>
     </section>
 
@@ -110,11 +121,20 @@
     <section class="section band" id="lista" aria-labelledby="lista-titulo" tabindex="-1">
       <div class="wrap narrow">
         <h2 id="lista-titulo">Apúntate a la lista de espera</h2>
-        <p class="lead">Te avisamos en cuanto abramos. Solo necesitamos tu email.</p>
+        <p class="lead">Solo necesitamos tu correo electrónico.</p>
+
+        <div class="waitlist-info">
+          <h3>¿Qué es la lista de espera?</h3>
+          <ul>
+            <li><strong>Todavía no se pueden encargar cuentos.</strong> Lo estamos preparando y aún no tenemos fecha.</li>
+            <li><strong>Apuntarse es gratis.</strong> No pagas nada y no te obliga a nada.</li>
+            <li><strong>Cuando se pueda encargar,</strong> te mandamos un correo con un enlace. Desde ese enlace encargas tu cuento, con el móvil o con el ordenador.</li>
+          </ul>
+        </div>
 
         <form class="form" action="#" method="post" data-form="waitlist" novalidate>
           <div class="field">
-            <label for="email">Tu email</label>
+            <label for="email">Tu correo electrónico</label>
             <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="254">
             <p class="field-error" data-error-for="email"></p>
           </div>
@@ -128,12 +148,12 @@
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
           </div>
           <div class="field field-check">
-            <input id="consent" name="consent" type="checkbox" required>
+            <label class="check-hit" for="consent"><input id="consent" name="consent" type="checkbox" required></label>
             <label for="consent">Soy mayor de 18 años y acepto la <a href="privacidad/">política de privacidad</a> para que me aviséis del lanzamiento.</label>
             <p class="field-error" data-error-for="consent"></p>
           </div>
           <div class="field field-check">
-            <input id="consent_marketing" name="consent_marketing" type="checkbox">
+            <label class="check-hit" for="consent_marketing"><input id="consent_marketing" name="consent_marketing" type="checkbox"></label>
             <label for="consent_marketing">Quiero recibir también novedades de Personal Tales. <span class="optional">(Opcional)</span></label>
           </div>
           <button class="btn btn-big btn-block" type="submit">Apuntarme a la lista de espera</button>
@@ -146,19 +166,24 @@
       </div>
     </section>
 
-    <!-- 7. Opinión -->
-    <section class="section wrap center" aria-labelledby="opina">
-      <h2 id="opina">¿Qué te parece?</h2>
-      <p class="lead">Estamos empezando y tu opinión nos ayuda mucho.</p>
-      <a class="btn btn-ghost" href="opinion/">Danos tu opinión</a>
+    <!-- 7. Contacto y opinión -->
+    <section class="section wrap center" id="contacto" aria-labelledby="opina">
+      <h2 id="opina">¿Tienes dudas?</h2>
+      <p class="lead">Escríbenos y te contestamos. Estamos empezando y tu opinión nos ayuda mucho.</p>
+      <p class="actions">
+        <a class="btn btn-big" href="mailto:daniel@suarezsa.com?subject=Pregunta%20sobre%20Personal%20Tales">Escríbenos un correo</a>
+        <a class="btn btn-ghost" href="opinion/">Danos tu opinión</a>
+      </p>
+      <p class="small">Nuestro correo: <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
     </section>
   </main>
 
   <footer class="footer">
     <div class="wrap">
       <p><strong>Personal Tales</strong> · cuentos personalizados · con Daida Partners</p>
-      <p><a href="privacidad/">Privacidad</a> · <a href="aviso-legal/">Aviso legal</a> · <a href="opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
-      <p class="small">Esta web no usa cookies.</p>
+      <p><a class="btn btn-contact" href="mailto:daniel@suarezsa.com?subject=Pregunta%20sobre%20Personal%20Tales">Escríbenos</a></p>
+      <p class="footer-links"><a href="privacidad/">Privacidad</a> · <a href="aviso-legal/">Aviso legal</a> · <a href="opinion/">Danos tu opinión</a> · <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a></p>
+      <p class="small">Esta web no usa cookies (archivos que guardan datos en tu móvil u ordenador).</p>
     </div>
   </footer>
 </body>

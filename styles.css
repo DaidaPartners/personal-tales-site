@@ -221,6 +221,11 @@ input:focus, select:focus, textarea:focus { border-color: var(--night-2); outlin
 .actions .btn { min-height: 48px; }
 .btn-contact { background: var(--gold-soft); color: var(--night); box-shadow: 0 4px 0 #a8770c; min-height: 48px; }
 .btn-contact:hover { background: #f0c45c; color: var(--night); }
+/* Pase TESTER 12/11 17:34: dentro del pie, `.footer a` (blanco) y `.footer a:hover` (oro) ganaban a
+   .btn-contact y el botón se leía blanco sobre oro (1,92:1) y oro sobre oro al pasar el ratón.
+   Con más especificidad, letra oscura en los dos estados (5,75:1 y 6,70:1, AA). */
+.footer a.btn-contact { color: var(--night); }
+.footer a.btn-contact:hover, .footer a.btn-contact:focus-visible { background: #f0c45c; color: var(--night); }
 
 /* Resumen legal llano */
 .summary { background: #fff; border-radius: 14px; box-shadow: var(--shadow); padding: 16px 18px; margin: 0 0 24px; }

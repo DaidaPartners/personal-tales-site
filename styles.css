@@ -8,6 +8,7 @@
   --night-2: #3b4a82;
   --gold: #c98a12;
   --gold-soft: #e8b33a;
+  --gold-text: #946200; /* dorado oscuro: 5,2:1 sobre blanco (AA) */
   --lilac: #7d6bb3;
   --lilac-soft: #ece6f7;
   --ok: #2f6b3c;
@@ -110,7 +111,7 @@ p { margin: 0 0 1em; }
 /* Pasos */
 .steps { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 16px; }
 .step { position: relative; background: #fff; border-radius: var(--radius); padding: 22px 20px 18px; box-shadow: var(--shadow); }
-.step-num { position: absolute; top: 14px; right: 16px; font: 700 2.2rem/1 var(--serif); color: #e6d6b0; }
+.step-num { position: absolute; top: 14px; right: 16px; font: 700 2.2rem/1 var(--serif); color: var(--gold-text); }
 .step-ico { width: 56px; height: 56px; margin-bottom: 10px; }
 .step p { margin: 0; color: var(--ink-soft); }
 @media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
@@ -233,3 +234,25 @@ input:focus, select:focus, textarea:focus { border-color: var(--night-2); outlin
 .field .check-hit { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -8px 0 0; cursor: pointer; }
 .field-check .check-hit input { width: 28px; height: 28px; margin: 0; cursor: pointer; }
 .field-check label[for]:not(.check-hit) { padding-top: 2px; }
+
+/* Pase Abuela 12/11 15:02 */
+/* Texto legal y de ayuda visible: nunca por debajo de 15 px (mínimo pedido: 14 px). */
+.small, .layer1, .hint, .field-error, .field-check label { font-size: max(.9375rem, 15px); }
+
+/* Casillas: la propia casilla mide 44 × 44 px (se dibuja un cuadro de 28 px en el centro)
+   y toda la fila (casilla + texto) se puede tocar. */
+.field-check { align-items: center; }
+.field-check .check-hit input {
+  -webkit-appearance: none; appearance: none; display: block;
+  width: 44px; height: 44px; margin: 0; padding: 0; border: 0; border-radius: 8px; cursor: pointer;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='1.5' y='1.5' width='25' height='25' rx='6' fill='%23fff' stroke='%232b3a67' stroke-width='3'/%3E%3C/svg%3E") center / 28px 28px no-repeat;
+}
+.field-check .check-hit input:checked {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='1.5' y='1.5' width='25' height='25' rx='6' fill='%232b3a67' stroke='%232b3a67' stroke-width='3'/%3E%3Cpath d='M7.5 14.5l4.5 4.5 8.5-10' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.field-check .check-hit input[aria-invalid="true"]:not(:checked) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='1.5' y='1.5' width='25' height='25' rx='6' fill='%23fbe5e1' stroke='%23a12d24' stroke-width='3'/%3E%3C/svg%3E");
+}
+.field-check .check-hit input:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 0; }
+.field .check-hit { margin: 0; }
+.field-check label[for]:not(.check-hit) { display: block; min-height: 44px; padding: 10px 0; cursor: pointer; }

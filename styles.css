@@ -9,6 +9,7 @@
   --gold: #c98a12;
   --gold-soft: #e8b33a;
   --gold-text: #946200; /* dorado oscuro: 5,2:1 sobre blanco (AA) */
+  --link-hover: #7a5000; /* enlaces al pasar el ratón: 6,55:1 sobre --paper, 5,91:1 sobre --paper-2, 7,06:1 sobre blanco (AA) */
   --lilac: #7d6bb3;
   --lilac-soft: #ece6f7;
   --ok: #2f6b3c;
@@ -37,7 +38,7 @@ body {
 
 img, svg { max-width: 100%; display: block; }
 a { color: var(--night-2); text-underline-offset: 3px; }
-a:hover { color: var(--gold); }
+a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 2px; border-radius: 4px; }
 
 h1, h2, h3 { font-family: var(--serif); line-height: 1.2; color: var(--night); margin: 0 0 .5em; }
@@ -256,3 +257,19 @@ input:focus, select:focus, textarea:focus { border-color: var(--night-2); outlin
 .field-check .check-hit input:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 0; }
 .field .check-hit { margin: 0; }
 .field-check label[for]:not(.check-hit) { display: block; min-height: 44px; padding: 10px 0; cursor: pointer; }
+
+/* Pase Abuela 12/11 16:14 */
+/* Derechos: primero en palabras llanas, debajo la lista legal. */
+.plain-rights { background: #fff; border-left: 6px solid var(--gold-soft); border-radius: 12px; padding: 12px 16px; font-size: 1.0625rem; }
+.legal-label { margin-bottom: .3em; }
+
+/* Casillas: recuadro visible de 28 × 28 px (mínimo pedido: 24 px) dentro de una zona de toque de 44 × 44 px;
+   la fila entera (casilla + texto) mide al menos 44 px de alto. */
+.field-check { min-height: 44px; }
+
+/* Texto legal y de ayuda en el ordenador: 16 px (mínimo pedido: 15 px). */
+@media (min-width: 860px) {
+  .small, .layer1, .hint, .field-error, .field-check label, .footer { font-size: 16px; }
+}
+.eyebrow { font-size: max(.9375rem, 15px); }
+@media (min-width: 860px) { .eyebrow { font-size: 16px; } }

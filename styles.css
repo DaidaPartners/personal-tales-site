@@ -273,3 +273,27 @@ input:focus, select:focus, textarea:focus { border-color: var(--night-2); outlin
 }
 .eyebrow { font-size: max(.9375rem, 15px); }
 @media (min-width: 860px) { .eyebrow { font-size: 16px; } }
+
+/* Pase Abuela 12/11 17:07 */
+/* Causa del ~12 px en el ordenador: casi todo el texto va en rem, y 1rem es el tamaño de letra
+   por defecto del navegador. Con 16 px, el texto de Privacidad mide 17 px; pero si el navegador
+   está en 12 px («Tamaño de fuente: pequeño» o similar), 1rem = 12 px y los párrafos, la lista
+   y el aviso «Provisional» bajan a 12,75 px. Solo .small estaba fijado en px (16 px).
+   Arreglo: la raíz nunca baja de 16 px (si alguien la tiene más grande, se respeta). */
+html { font-size: max(100%, 16px); }
+/* Etiquetas («Pronto»…): .78rem eran 12,5 px incluso con la raíz en 16 px. */
+.tag { font-size: max(.9375rem, 15px); }
+@media (min-width: 860px) { .tag, .topbar-link { font-size: 16px; } }
+
+/* Texto legal de derechos plegado: empieza cerrado; la frase llana queda visible encima. */
+.legal-details { margin: 0 0 1em; border: 2px solid #e6dcc6; border-radius: 12px; background: #fff; }
+.legal-details > summary {
+  display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 16px;
+  cursor: pointer; font-weight: 600; color: var(--night-2); list-style: none;
+}
+.legal-details > summary::-webkit-details-marker { display: none; }
+.legal-details > summary::before { content: "▸"; font-size: 1.1em; transition: transform .15s; }
+.legal-details[open] > summary::before { transform: rotate(90deg); }
+.legal-details > summary:hover { color: var(--link-hover); }
+.legal-details > :not(summary) { margin-left: 16px; margin-right: 16px; }
+.legal-details > p:last-child { margin-bottom: 12px; }

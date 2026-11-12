@@ -302,3 +302,24 @@ html { font-size: max(100%, 16px); }
 .legal-details > summary:hover { color: var(--link-hover); }
 .legal-details > :not(summary) { margin-left: 16px; margin-right: 16px; }
 .legal-details > p:last-child { margin-bottom: 12px; }
+
+/* Pase Abuela 12/11 18:53 */
+/* Enlaces dentro del texto («política de privacidad», el correo, aepd.es, «← Volver al inicio»…):
+   medían ~150 × 20 px en el móvil. Ahora cada enlace es un bloque en línea de al menos 44 px de alto
+   (texto centrado en esa altura), sin cortarse a mitad y sin salirse de la columna. Medido en px
+   absolutos, con la letra del navegador en 16 y en 12. */
+main a:not(.btn) {
+  display: inline-block; min-height: 44px; line-height: 44px; padding: 0;
+  max-width: 100%; overflow-wrap: anywhere; vertical-align: baseline;
+}
+.brand { min-height: 44px; }
+.skip { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* Caja legal de bajo del formulario, con etiquetas en palabras llanas. */
+.layer1-list { margin: 0 0 .4em; }
+.layer1-list dt { font-weight: 700; color: var(--ink); margin-top: .6em; }
+.layer1-list dt:first-child { margin-top: 0; }
+.layer1-list dd { margin: 0; }
+.layer1-list dd p { margin: 0; }
+.rights-list { margin: .3em 0 0; padding-left: 1.2em; }
+.rights-list li { margin-bottom: .3em; }

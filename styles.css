@@ -378,3 +378,30 @@ main a:not(.btn) {
 /* 6) /opinion/: la pista «Si nos dejas tu correo…» va pegada a su casilla, en el mismo recuadro. */
 .consent-box { border: 2px solid #e6dcc6; border-radius: 14px; padding: 10px 12px 2px; row-gap: 2px; align-items: start; }
 .consent-box .consent-hint { grid-column: 1 / -1; margin: 0; }
+
+/* Pase Abuela 13/11 15:25 */
+/* 2) /privacidad/: los datos de la empresa, cada uno en su línea (lista sin viñetas). */
+.company-data { list-style: none; padding: 0; margin: 0 0 1em; }
+.company-data li { display: block; margin: 0 0 .25em; }
+
+/* 3) Casilla obligatoria: el cuadro va a la izquierda, alineado con la PRIMERA línea de la frase
+      (antes `align-items: center` lo dejaba entre las dos líneas cuando la frase se parte en el móvil).
+      La zona de toque sigue siendo de 44 × 44 px. */
+.field-check { align-items: start; }
+.field-check .check-hit { align-self: start; margin: 0; }
+
+/* 4) Botones «Apuntarme a la lista de espera» (y los demás .btn-big): al menos 48 px de alto en
+      cualquier pantalla, con el texto centrado. Las etiquetas de los campos («Tu correo electrónico»,
+      «Tu nombre») con la misma letra que en el móvil también en el ordenador (≥ 16 px), sin que la
+      parte entre paréntesis se achique. */
+.btn-big {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; max-width: 100%;
+}
+.btn-big.btn-block { display: flex; }
+.field:not(.field-check) > label,
+.field:not(.field-check) > label .optional { font-size: max(1rem, 16px); }
+@media (min-width: 860px) {
+  .field:not(.field-check) > label,
+  .field:not(.field-check) > label .optional { font-size: max(1rem, 16px); }
+}

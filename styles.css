@@ -351,3 +351,30 @@ main a:not(.btn) {
 /* Casilla obligatoria: una idea por línea (mayor de 18 · acepto la privacidad · para qué). */
 .field-check .consent-line { display: block; }
 .field-check .consent-line + .consent-line { margin-top: 4px; }
+
+/* Pase Abuela 13/11 09:05 */
+/* 5) «Todavía no se pueden encargar cuentos»: a la vista, en letra normal (17 px), justo encima del botón. */
+.not-yet {
+  font-size: max(1.0625rem, 17px); line-height: 1.45; color: var(--ink);
+  background: #fff; border-left: 6px solid var(--gold-soft); border-radius: 12px;
+  padding: 10px 14px; margin: 14px 0 4px; max-width: 34em;
+}
+@media (min-width: 860px) { .hero .not-yet { margin-left: auto; margin-right: auto; text-align: left; } }
+.not-yet-form { margin: 4px 0 12px; max-width: none; }
+
+/* 7) Etiquetas de los campos de texto: letra de 16 px o más y zona de 44 px de alto (tocarla lleva al campo). */
+.field:not(.field-check) > label {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0 .3em;
+  min-height: 44px; font-size: max(1rem, 16px); line-height: 1.35; margin-bottom: 4px; cursor: pointer;
+}
+
+/* 3) y 6) Casilla obligatoria aparte; el aviso del lanzamiento y las novedades (opcional), en su propio recuadro. */
+.mail-choices { border: 2px solid #e6dcc6; border-radius: 14px; padding: 12px 14px 4px; margin: 0 0 16px; }
+.mail-choices-title { font-weight: 700; margin: 0 0 .4em; font-size: max(1rem, 16px); }
+.mail-launch { margin: 0 0 .6em; font-size: max(.9375rem, 15px); }
+@media (min-width: 860px) { .mail-launch { font-size: 16px; } }
+.mail-choices .field-check { margin-bottom: 8px; }
+
+/* 6) /opinion/: la pista «Si nos dejas tu correo…» va pegada a su casilla, en el mismo recuadro. */
+.consent-box { border: 2px solid #e6dcc6; border-radius: 14px; padding: 10px 12px 2px; row-gap: 2px; align-items: start; }
+.consent-box .consent-hint { grid-column: 1 / -1; margin: 0; }

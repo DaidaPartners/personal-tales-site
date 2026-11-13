@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   var EMAIL_RE = /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/;
-  var CONSENT_VERSION = '2026-11-13-0457-abuela-provisional';
+  var CONSENT_VERSION = '2026-11-13-0905-abuela-provisional';
   var CONTACT = 'daniel@suarezsa.com';
   var CONFIG = window.DAIDA_CUENTOS_CONFIG;
   var STATIC_MODE = !!CONFIG;
@@ -47,11 +47,11 @@
     if (kind === 'waitlist') {
       if (!EMAIL_RE.test(data.email)) errors.email = 'Revisa el correo electrónico: parece que no está bien escrito.';
       if (data.name && data.name.length > 80) errors.name = 'El nombre es muy largo (máximo 80 letras).';
-      if (!data.consent) errors.consent = 'Marca la casilla de mayor de 18 años y privacidad para poder apuntarte.';
+      if (!data.consent) errors.consent = 'Marca la casilla «Tengo más de 18 años y he leído cómo cuidáis mis datos» para poder apuntarte.';
     } else {
       if (!data.opinion && !data.story_idea) errors.opinion = 'Escribe al menos una de las dos respuestas.';
       if (data.email && !EMAIL_RE.test(data.email)) errors.email = 'Revisa el correo electrónico: parece que no está bien escrito.';
-      if (data.email && !data.consent) errors.consent = 'Si nos dejas tu correo, marca la casilla de mayor de 18 años y privacidad.';
+      if (data.email && !data.consent) errors.consent = 'Si nos dejas tu correo, marca la casilla «Tengo más de 18 años…».';
     }
     return errors;
   }
@@ -102,8 +102,7 @@
       body = 'Hola, quiero apuntarme a la lista de espera.\n\n' +
         'Correo: ' + data.email + '\n' +
         (data.name ? 'Nombre: ' + data.name + '\n' : '') +
-        'Soy mayor de 18 años.\n' +
-        'Acepto la política de privacidad.\n' +
+        'Tengo más de 18 años y he leído cómo cuidáis mis datos.\n' +
         'Quiero que me aviséis del lanzamiento.\n' +
         'Novedades: ' + (data.consent_marketing ? 'sí, también quiero recibirlas' : 'no') + '\n';
     } else {
@@ -117,11 +116,11 @@
   var STATIC_ERRORS = {
     waitlist: {
       datos: 'Revisa el correo electrónico: parece que no está bien escrito.',
-      consentimiento: 'Falta marcar la casilla de mayor de 18 años y privacidad.'
+      consentimiento: 'Falta marcar la casilla «Tengo más de 18 años y he leído cómo cuidáis mis datos».'
     },
     opinion: {
       datos: 'Escribe al menos una respuesta y revisa el correo si lo has puesto.',
-      consentimiento: 'Si nos dejas tu correo, marca la casilla de mayor de 18 años y privacidad.'
+      consentimiento: 'Si nos dejas tu correo, marca la casilla «Tengo más de 18 años…».'
     },
     formato: 'No hemos podido leer el formulario. Prueba otra vez.',
     tipo: 'Algo no cuadra en el formulario. Recarga la página y prueba otra vez.'

@@ -7,9 +7,9 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#fbf6ec">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=f625d59b0e">
+  <link rel="stylesheet" href="../styles.css?v=9a19335d6a">
   <script src="../config.js"></script>
-  <script src="../app.js?v=a98cf23bec" defer></script>
+  <script src="../app.js?v=54d4140b8a" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -44,12 +44,12 @@
         <label for="website">No rellenes este campo</label>
         <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
       </div>
-      <p class="hint" id="consent_hint">Si nos dejas tu correo, marca también esta casilla:</p>
-      <div class="field field-check">
+      <!-- La pista va dentro del mismo recuadro que su casilla (pase Abuela 13/11 09:05). -->
+      <div class="field field-check consent-box">
+        <p class="hint consent-hint" id="consent_hint">Si nos dejas tu correo, marca también esta casilla:</p>
         <label class="check-hit" for="consent"><input id="consent" name="consent" type="checkbox" aria-describedby="consent_hint"></label>
         <label for="consent">
-          <span class="consent-line">Soy mayor de 18 años.</span>
-          <span class="consent-line">Acepto la <a href="../privacidad/">política de privacidad</a>.</span>
+          <span class="consent-line">Tengo más de 18 años y he leído <a href="../privacidad/">cómo cuidáis mis datos</a>.</span>
           <span class="consent-line">Quiero que guardéis mi correo con mi opinión para escribirme sobre ella.</span>
         </label>
         <p class="field-error" data-error-for="consent"></p>
@@ -62,7 +62,7 @@
           <dt>Quién guarda tus datos</dt> <dd>Daida Partners, S.L.</dd>
           <dt>Para qué</dt>
           <dd>Mejorar el producto con tu opinión y, si nos dejas tu correo, poder escribirte sobre ella.</dd>
-          <dt>Por qué podemos</dt>
+          <dt>Por qué podemos usar tus datos</dt>
           <dd>Porque tú nos das permiso al marcar la casilla. Puedes retirarlo cuando quieras.</dd>
           <dt>Tus derechos</dt>
           <dd>
@@ -71,9 +71,8 @@
               <li><strong>Ver tus datos:</strong> saber qué datos tuyos tenemos y pedirnos una copia.</li>
               <li><strong>Corregir tus datos:</strong> que arreglemos lo que esté mal.</li>
               <li><strong>Eliminar tus datos:</strong> que los borremos.</li>
-              <li><strong>Oponerte a su uso:</strong> que dejemos de usarlos.</li>
-              <li><strong>Frenar su uso:</strong> que los guardemos un tiempo sin usarlos, por ejemplo mientras miramos si están bien.</li>
-              <li><strong>Llevarte tus datos:</strong> que te mandemos un documento con tus datos, para dárselo a otra empresa si quieres.</li>
+              <li><strong>Pedir que no uséis mis datos:</strong> que dejemos de usarlos.</li>
+              <li><strong>Pedir que dejéis de usarlos un tiempo:</strong> que los guardemos sin usarlos, por ejemplo mientras miramos si están bien.</li>
             </ul>
           </dd>
         </dl>

@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   var EMAIL_RE = /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/;
-  var CONSENT_VERSION = '2026-11-13-abuela-provisional';
+  var CONSENT_VERSION = '2026-11-13-0457-abuela-provisional';
   var CONTACT = 'daniel@suarezsa.com';
   var CONFIG = window.DAIDA_CUENTOS_CONFIG;
   var STATIC_MODE = !!CONFIG;

@@ -13,9 +13,9 @@
   <meta property="og:image" content="assets/hero.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/hero-640.webp" media="(max-width: 700px)" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=3d2a37dd90">
+  <link rel="stylesheet" href="styles.css?v=2d00c209b1">
   <script src="config.js"></script>
-  <script src="app.js?v=0cb4ba44ed" defer></script>
+  <script src="app.js?v=2a4d8184a6" defer></script>
 </head>
 <body>
   <a class="skip" href="#lista">Saltar a la lista de espera</a>
@@ -149,7 +149,11 @@
           </div>
           <div class="field field-check">
             <label class="check-hit" for="consent"><input id="consent" name="consent" type="checkbox" required></label>
-            <label for="consent">Soy mayor de 18 años y acepto la <a href="privacidad/">política de privacidad</a> para que me aviséis del lanzamiento.</label>
+            <label for="consent">
+              <span class="consent-line">Soy mayor de 18 años.</span>
+              <span class="consent-line">Acepto la <a href="privacidad/">política de privacidad</a>.</span>
+              <span class="consent-line">Quiero que me aviséis del lanzamiento.</span>
+            </label>
             <p class="field-error" data-error-for="consent"></p>
           </div>
           <div class="field field-check">
@@ -165,17 +169,17 @@
               <dt>Para qué</dt>
               <dd>Avisarte del lanzamiento y, solo si marcas la segunda casilla, enviarte novedades.</dd>
               <dt>Por qué podemos</dt>
-              <dd>Porque tú nos das permiso (tu consentimiento) al marcar la casilla. Puedes retirarlo cuando quieras.</dd>
+              <dd>Porque tú nos das permiso al marcar la casilla. Puedes retirarlo cuando quieras.</dd>
               <dt>Tus derechos</dt>
               <dd>
                 <p>Puedes pedirnos cualquiera de estas cosas escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>:</p>
                 <ul class="rights-list">
-                  <li><strong>Acceso:</strong> saber qué datos tuyos tenemos y pedirnos una copia.</li>
-                  <li><strong>Rectificación:</strong> que corrijamos tus datos si están mal.</li>
-                  <li><strong>Supresión:</strong> que borremos tus datos.</li>
-                  <li><strong>Oposición:</strong> que dejemos de usar tus datos.</li>
-                  <li><strong>Limitación:</strong> que guardemos tus datos pero no los usemos durante un tiempo, por ejemplo mientras comprobamos si están bien.</li>
-                  <li><strong>Portabilidad:</strong> que te demos tus datos en un archivo para que puedas llevarlos a otro sitio.</li>
+                  <li><strong>Ver tus datos (acceso):</strong> saber qué datos tuyos tenemos y pedirnos una copia.</li>
+                  <li><strong>Corregir tus datos (rectificación):</strong> que corrijamos tus datos si están mal.</li>
+                  <li><strong>Eliminar tus datos (supresión):</strong> que borremos tus datos.</li>
+                  <li><strong>Oponerte a su uso (oposición):</strong> que dejemos de usar tus datos.</li>
+                  <li><strong>Frenar su uso (limitación):</strong> que guardemos tus datos pero no los usemos durante un tiempo, por ejemplo mientras comprobamos si están bien.</li>
+                  <li><strong>Llevarte tus datos (portabilidad):</strong> que te demos tus datos en un archivo para que puedas llevarlos a otro sitio.</li>
                 </ul>
               </dd>
             </dl>

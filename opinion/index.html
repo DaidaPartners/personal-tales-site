@@ -7,9 +7,9 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#fbf6ec">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=3d2a37dd90">
+  <link rel="stylesheet" href="../styles.css?v=2d00c209b1">
   <script src="../config.js"></script>
-  <script src="../app.js?v=0cb4ba44ed" defer></script>
+  <script src="../app.js?v=2a4d8184a6" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -46,7 +46,12 @@
       </div>
       <div class="field field-check">
         <label class="check-hit" for="consent"><input id="consent" name="consent" type="checkbox"></label>
-        <label for="consent">Si dejo mi correo electrónico: soy mayor de 18 años y acepto la <a href="../privacidad/">política de privacidad</a> para que guardéis mi correo junto a mi opinión y podáis escribirme sobre ella.</label>
+        <label for="consent">
+          <span class="consent-line">Si dejo mi correo electrónico:</span>
+          <span class="consent-line">Soy mayor de 18 años.</span>
+          <span class="consent-line">Acepto la <a href="../privacidad/">política de privacidad</a>.</span>
+          <span class="consent-line">Guardad mi correo junto a mi opinión para poder escribirme sobre ella.</span>
+        </label>
         <p class="field-error" data-error-for="consent"></p>
       </div>
       <button class="btn btn-big btn-block" type="submit">Enviar mi opinión</button>
@@ -58,17 +63,17 @@
           <dt>Para qué</dt>
           <dd>Mejorar el producto con tu opinión y, si nos dejas tu correo, poder escribirte sobre ella.</dd>
           <dt>Por qué podemos</dt>
-          <dd>Porque tú nos das permiso (tu consentimiento) al marcar la casilla. Puedes retirarlo cuando quieras.</dd>
+          <dd>Porque tú nos das permiso al marcar la casilla. Puedes retirarlo cuando quieras.</dd>
           <dt>Tus derechos</dt>
           <dd>
             <p>Puedes pedirnos cualquiera de estas cosas escribiendo a <a href="mailto:daniel@suarezsa.com">daniel@suarezsa.com</a>:</p>
             <ul class="rights-list">
-              <li><strong>Acceso:</strong> saber qué datos tuyos tenemos y pedirnos una copia.</li>
-              <li><strong>Rectificación:</strong> que corrijamos tus datos si están mal.</li>
-              <li><strong>Supresión:</strong> que borremos tus datos.</li>
-              <li><strong>Oposición:</strong> que dejemos de usar tus datos.</li>
-              <li><strong>Limitación:</strong> que guardemos tus datos pero no los usemos durante un tiempo, por ejemplo mientras comprobamos si están bien.</li>
-              <li><strong>Portabilidad:</strong> que te demos tus datos en un archivo para que puedas llevarlos a otro sitio.</li>
+              <li><strong>Ver tus datos (acceso):</strong> saber qué datos tuyos tenemos y pedirnos una copia.</li>
+              <li><strong>Corregir tus datos (rectificación):</strong> que corrijamos tus datos si están mal.</li>
+              <li><strong>Eliminar tus datos (supresión):</strong> que borremos tus datos.</li>
+              <li><strong>Oponerte a su uso (oposición):</strong> que dejemos de usar tus datos.</li>
+              <li><strong>Frenar su uso (limitación):</strong> que guardemos tus datos pero no los usemos durante un tiempo, por ejemplo mientras comprobamos si están bien.</li>
+              <li><strong>Llevarte tus datos (portabilidad):</strong> que te demos tus datos en un archivo para que puedas llevarlos a otro sitio.</li>
             </ul>
           </dd>
         </dl>

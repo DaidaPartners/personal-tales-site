@@ -9,7 +9,7 @@
 (function () {
   'use strict';
   var EMAIL_RE = /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/;
-  var CONSENT_VERSION = '2026-11-12-abuela-provisional';
+  var CONSENT_VERSION = '2026-11-13-abuela-provisional';
   var CONTACT = 'daniel@suarezsa.com';
   var CONFIG = window.DAIDA_CUENTOS_CONFIG;
   var STATIC_MODE = !!CONFIG;
@@ -102,7 +102,9 @@
       body = 'Hola, quiero apuntarme a la lista de espera.\n\n' +
         'Correo: ' + data.email + '\n' +
         (data.name ? 'Nombre: ' + data.name + '\n' : '') +
-        'Soy mayor de 18 años y acepto la política de privacidad para que me aviséis del lanzamiento.\n' +
+        'Soy mayor de 18 años.\n' +
+        'Acepto la política de privacidad.\n' +
+        'Quiero que me aviséis del lanzamiento.\n' +
         'Novedades: ' + (data.consent_marketing ? 'sí, también quiero recibirlas' : 'no') + '\n';
     } else {
       subject = 'Mi opinión sobre Personal Tales';
